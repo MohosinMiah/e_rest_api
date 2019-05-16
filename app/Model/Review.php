@@ -1,16 +1,14 @@
 <?php
-
 namespace App\Model;
-
-
+use App\Model\Product;
 use Illuminate\Database\Eloquent\Model;
-use app\Model\Product;
 class Review extends Model
 {
+	protected $fillable = [
+		'star','customer','review'
+	];
     public function product()
     {
-        
-        return $this->belongsTo('app\Model\Product'); 
-        
+    	return $this->belongsTo(Product::class); 
     }
 }
