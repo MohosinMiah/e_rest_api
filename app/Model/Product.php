@@ -7,6 +7,7 @@ use app\Model\Review;
 
 class Product extends Model
 {
+    
     public function reviews()
     {
         
